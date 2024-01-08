@@ -132,6 +132,10 @@ const month = '';
       for (let i = 0; i < orderUris.length; i++) {
         const { ORDERS } = selector;
         const orderUri = `${SELLER_BASE_URI}${orderUris[i]}`;
+        if(orderUri.endsWith('null')) {
+          console.log(`${i}. Error while constructing uri`);
+          continue;
+        };
         console.log(`${i}. Navigating to `, orderUri);
 
         // 6. Navigate to the orders page
@@ -139,7 +143,6 @@ const month = '';
         await orderPg.goto(orderUri, { waitUntil: 'networkidle0', timeout: 0 });
 
         // 7. Pull order id
-        await page.waitForTimeout(2000);
         const orderId = await orderPg.$eval(ORDERS.ORDER_ID, (ele) => ele.textContent);
 
         // 8. Pull customer info
