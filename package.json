@@ -1,0 +1,28 @@
+{
+  "name": "femino-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/amazon/orders.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansarianas/femino-automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansarianas/femino-automation/issues"
+  },
+  "homepage": "https://github.com/ansarianas/femino-automation#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^21.7.0",
+    "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/speakeasy": "^2.0.10"
+  }
+}
