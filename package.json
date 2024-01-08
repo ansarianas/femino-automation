@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/amazon/orders.js"
+    "orders": "node src/amazon/orders.js"
   },
   "repository": {
     "type": "git",
