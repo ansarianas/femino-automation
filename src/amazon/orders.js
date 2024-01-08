@@ -132,7 +132,7 @@ const month = '';
       for (let i = 0; i < orderUris.length; i++) {
         const { ORDERS } = selector;
         const orderUri = `${SELLER_BASE_URI}${orderUris[i]}`;
-        console.log(`Navigating to `, orderUri);
+        console.log(`${i}. Navigating to `, orderUri);
 
         // 6. Navigate to the orders page
         const orderPg = await browser.newPage();
@@ -165,7 +165,7 @@ const month = '';
         const transaction = await transactionPg.evaluate((row) => {
           const rows = document.querySelectorAll(row);
           const amts = [];
-          const isRefund = rows.length > 3;
+          const isRefund = rows.length === 4;
 
           if (isRefund) {
             amts.push(rows[1]?.lastChild?.textContent || 'refund');
@@ -199,12 +199,12 @@ const month = '';
                 transaction: {
                   listingPrice: el.querySelectorAll(data)[5].textContent,
                   tax: el.querySelectorAll(data)[6].textContent?.match(/Tax:₹([0-9]+\.[0-9]{2})/)?.[1],
-                  ...(tx.length > 2 && {
+                  ...(tx.length === 3 && {
                     refund: tx[0],
                     payment: tx[1],
                     shipping: tx[2],
                   }),
-                  ...(tx.length < 2 && { payment: tx[0], shipping: tx[1] }),
+                  ...(tx.length === 2 && { payment: tx[0], shipping: tx[1] }),
                 },
               });
             });
