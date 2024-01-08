@@ -6,7 +6,7 @@ const amazon = require('../constants/amazon');
 
 const fromDate = '';
 const toDate = '';
-const month = ''
+const month = '';
 
 (async () => {
   const { SELLER_EMAIL_ID, SELLER_PASSWORD, DASHBOARD_URI, AUTH_KEY, SELLER_BASE_URI } = amazon;
@@ -165,7 +165,7 @@ const month = ''
         const transaction = await transactionPg.evaluate((row) => {
           const rows = document.querySelectorAll(row);
           const amts = [];
-          const isRefund = rows.length > 2;
+          const isRefund = rows.length > 3;
 
           if (isRefund) {
             amts.push(rows[1]?.lastChild?.textContent || 'refund');
