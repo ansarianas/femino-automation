@@ -132,10 +132,10 @@ const month = '';
       for (let i = 0; i < orderUris.length; i++) {
         const { ORDERS } = selector;
         const orderUri = `${SELLER_BASE_URI}${orderUris[i]}`;
-        if(orderUri.endsWith('null')) {
+        if (orderUri.endsWith('null')) {
           console.log(`${i}. Error while constructing uri`);
           continue;
-        };
+        }
         console.log(`${i}. Navigating to `, orderUri);
 
         // 6. Navigate to the orders page
