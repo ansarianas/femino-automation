@@ -15,7 +15,7 @@
                     "listingPrice": "₹898.00",
                     "tax": "91.40",
                     "shipping": "-₹82.60",
-                    "closing": "₹669.15"
+                    "payment": "₹669.15"
                 }
             }
         ],
@@ -41,7 +41,7 @@
                     "listingPrice": "₹599.00",
                     "tax": "60.97",
                     "shipping": "-₹67.26",
-                    "closing": "₹444.64"
+                    "payment": "₹444.64"
                 }
             }
         ],
@@ -66,7 +66,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹456.00",
+                    "payment": "₹456.00",
                     "shipping": "-₹116.82"
                 }
             }
@@ -92,7 +92,7 @@
                 "transaction": {
                     "listingPrice": "₹898.00",
                     "tax": "91.40",
-                    "closing": "₹669.15",
+                    "payment": "₹669.15",
                     "shipping": "-₹116.82"
                 }
             }
@@ -118,7 +118,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹116.82"
                 }
             }
@@ -145,7 +145,7 @@
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
                     "refund": "-₹466.52",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹116.82"
                 }
             }
@@ -171,7 +171,7 @@
                 "transaction": {
                     "listingPrice": "₹725.00",
                     "tax": "73.80",
-                    "closing": "₹545.61",
+                    "payment": "₹545.61",
                     "shipping": "-₹87.32"
                 }
             }
@@ -197,7 +197,7 @@
                 "transaction": {
                     "listingPrice": "₹898.00",
                     "tax": "91.41",
-                    "closing": "₹669.15",
+                    "payment": "₹669.15",
                     "shipping": "-₹51.92"
                 }
             }
@@ -223,7 +223,7 @@
                 "transaction": {
                     "listingPrice": "₹499.00",
                     "tax": "53.46",
-                    "closing": "₹427.39",
+                    "payment": "₹427.39",
                     "shipping": "-₹87.32"
                 }
             }
@@ -249,7 +249,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -275,7 +275,7 @@
                 "transaction": {
                     "listingPrice": "₹499.00",
                     "tax": "53.46",
-                    "closing": "₹427.39",
+                    "payment": "₹427.39",
                     "shipping": "-₹62.54"
                 }
             }
@@ -301,7 +301,7 @@
                 "transaction": {
                     "listingPrice": "₹898.00",
                     "tax": "96.21",
-                    "closing": "₹706.23",
+                    "payment": "₹706.23",
                     "shipping": "-₹87.32"
                 }
             }
@@ -327,7 +327,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -353,7 +353,7 @@
                 "transaction": {
                     "listingPrice": "₹898.00",
                     "tax": "96.21",
-                    "closing": "₹573.20",
+                    "payment": "₹573.20",
                     "shipping": "-₹794.73"
                 }
             }
@@ -379,7 +379,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -405,7 +405,7 @@
                 "transaction": {
                     "listingPrice": "₹655.00",
                     "tax": "66.67",
-                    "closing": "₹478.49",
+                    "payment": "₹478.49",
                     "shipping": "-₹87.32"
                 }
             }
@@ -432,7 +432,7 @@
                     "listingPrice": "₹595.00",
                     "tax": "63.76",
                     "refund": "-₹466.51",
-                    "closing": "₹466.51",
+                    "payment": "₹466.51",
                     "shipping": "-₹51.92"
                 }
             }
@@ -459,7 +459,7 @@
                     "listingPrice": "₹979.00",
                     "tax": "104.90",
                     "refund": "-₹878.95",
-                    "closing": "₹790.45",
+                    "payment": "₹790.45",
                     "shipping": "-₹51.92"
                 }
             }
@@ -485,7 +485,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -512,7 +512,7 @@
                     "listingPrice": "₹465.00",
                     "tax": "49.82",
                     "refund": "-₹397.31",
-                    "closing": "₹397.31",
+                    "payment": "₹397.31",
                     "shipping": "-₹87.32"
                 }
             }
@@ -538,7 +538,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -564,7 +564,7 @@
                 "transaction": {
                     "listingPrice": "₹595.00",
                     "tax": "63.75",
-                    "closing": "₹466.52",
+                    "payment": "₹466.52",
                     "shipping": "-₹87.32"
                 }
             }
@@ -591,7 +591,7 @@
                     "listingPrice": "₹898.00",
                     "tax": "96.21",
                     "refund": "-₹794.73",
-                    "closing": "₹706.23",
+                    "payment": "₹706.23",
                     "shipping": "-₹87.32"
                 }
             }
