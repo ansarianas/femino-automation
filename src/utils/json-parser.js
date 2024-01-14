@@ -65,4 +65,4 @@ const worksheet = xlsx.utils.json_to_sheet(transformedRows, {
 });
 
 xlsx.utils.book_append_sheet(workbook, worksheet, 'Amazon');
-xlsx.writeFile(workbook, `${fileData}.xlsx`);
+xlsx.writeFile(workbook, `${fileName}.xlsx`);
