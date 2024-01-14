@@ -18,7 +18,7 @@ var fs = require('fs');
  */
 
 const fileName = '';
-const fileData = fs.readFileSync(`../../data/amazon/orders/${fileName}`, 'utf8');
+const fileData = fs.readFileSync(`../../data/amazon/orders/${fileName}.json`, 'utf8');
 const parsedData = JSON.parse(fileData);
 const transformedRows = [];
 
@@ -38,6 +38,7 @@ parsedData.forEach((data, index) => {
       tax: prod.transaction.tax,
       shipping: prod.transaction.shipping.replace('-₹', ''),
       closing: prod.transaction.closing.replace('₹', ''),
+      refund: prod.transaction.refund.replace('-₹', ''),
     };
     transformedRows.push(row);
   });
@@ -59,8 +60,9 @@ const worksheet = xlsx.utils.json_to_sheet(transformedRows, {
     'Tax',
     'Shipping',
     'Closing Amount',
+    'Refund Amount',
   ],
 });
 
-xlsx.utils.book_append_sheet(workbook, worksheet, 'Jan-23');
-xlsx.writeFile(workbook, 'femino.xlsx');
+xlsx.utils.book_append_sheet(workbook, worksheet, 'Amazon');
+xlsx.writeFile(workbook, `${fileData}.xlsx`);
