@@ -5,8 +5,11 @@ const dotenv = require('dotenv');
 (() => {
   dotenv.config({ path: '../../config.env' });
 
-  const workbook = xlsx.readFile('../../data/amazon/orders/amazon-orders-23-07-not-present.xlsx');
-  const data = xlsx.utils.sheet_to_json(workbook.Sheets['Sheet1']);
+  const table = '<TABLE_NAME>';
+  const file = '<FILE_PATH>';
+  const sheetName = workbook.SheetNames;
+  const workbook = xlsx.readFile(file);
+  const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName[0]]);
   const connection = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -17,7 +20,7 @@ const dotenv = require('dotenv');
   console.log(process.env);
 
   connection.connect();
-  const insertQuery = `INSERT INTO amazon_sales_fy_23 (${Object.keys(data[0]).join(',')}) VALUES ?`;
+  const insertQuery = `INSERT INTO ${table} (${Object.keys(data[0]).join(',')}) VALUES ?`;
   const rows = data.map((order) => [
     order.order_id,
     order.order_uri,
