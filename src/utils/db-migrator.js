@@ -7,8 +7,8 @@ const dotenv = require('dotenv');
 
   const table = '<TABLE_NAME>';
   const file = '<FILE_PATH>';
-  const sheetName = workbook.SheetNames;
   const workbook = xlsx.readFile(file);
+  const sheetName = workbook.SheetNames;
   const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName[0]]);
   const connection = mysql.createConnection({
     host: process.env.DB_HOST,
