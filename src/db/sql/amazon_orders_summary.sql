@@ -1,4 +1,4 @@
-CREATE TABLE amazon_sales_fy_23 (
+CREATE TABLE amazon_orders_summary (
     id INT NOT NULL AUTO_INCREMENT,
     order_id VARCHAR(19) NOT NULL,
     order_uri VARCHAR(67) NOT NULL,
@@ -17,6 +17,6 @@ CREATE TABLE amazon_sales_fy_23 (
 );
 
 
-CREATE INDEX order_id_date ON amazon_sales_fy_23 (order_id, order_date);
-CREATE INDEX order_id ON amazon_sales_fy_23 (order_id);
-CREATE INDEX order_date ON amazon_sales_fy_23 (order_date);
+CREATE INDEX order_id_date ON amazon_orders_summary (order_id, order_date);
+CREATE INDEX order_id ON amazon_orders_summary (order_id);
+CREATE INDEX order_date ON amazon_orders_summary (order_date);
