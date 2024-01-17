@@ -37,8 +37,8 @@ parsedData.forEach((data, index) => {
       listingPrice: prod.transaction.listingPrice.replace('₹', ''),
       tax: prod.transaction.tax,
       shipping: prod.transaction.shipping.replace('-₹', ''),
-      closing: prod.transaction.closing.replace('₹', ''),
-      refund: prod.transaction.refund.replace('-₹', ''),
+      closing: prod.transaction.payment.replace('₹', ''),
+      refund: prod.transaction.refund?.replace('-₹', ''),
     };
     transformedRows.push(row);
   });
