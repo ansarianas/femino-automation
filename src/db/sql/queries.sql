@@ -10,14 +10,25 @@ SELECT
 FROM
     femino.amazon_orders_summary
 WHERE
-    order_date LIKE '%Jul%'
+    order_date LIKE '%%'
 GROUP BY return_type;
 
--- PROFIT PER MONTH
+-- PROFIT PER MONTH FOR DELIVERED ORDERS
 SELECT 
-    SUM(profit)
+    SUM(o.closing_amt - (p.cost_price + o.tax + o.shipping)) AS profit
 FROM
-    amazon_sales_summary
+    femino.amazon_orders_summary AS o
+        JOIN
+    femino.amazon_products AS p ON p.product_name = o.product_name
 WHERE
-    closing_amt != 0.00 AND refund != 0.00
-        AND order_date LIKE '%Jan%';
+    order_date LIKE '%%'
+        AND closing_amt > refund;
+
+-- RETURN SHIPMENT 
+SELECT 
+    SUM(refund - closing_amt) AS return_shipping
+FROM
+    femino.amazon_orders_summary
+WHERE
+    order_date LIKE '%%'
+        AND closing_amt < refund;
