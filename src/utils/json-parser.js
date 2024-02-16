@@ -14,7 +14,8 @@ var fs = require('fs');
  * 9. Listing Price
  * 10. Tax
  * 11. Shipping
- * 12. Closing Amount
+ * 12. Refund
+ * 13. Closing Amount
  */
 
 const fileName = '';
