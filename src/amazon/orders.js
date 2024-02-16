@@ -1,15 +1,17 @@
 const puppeteer = require('puppeteer');
 const speakeasy = require('speakeasy');
 const fs = require('fs');
+const dotenv = require('dotenv');
 const selector = require('../constants/amazon-selectors');
-const amazon = require('../constants/amazon');
+
+dotenv.config({ path: '../../config.env' });
 
 const fromDate = '';
 const toDate = '';
 const month = '';
 
 (async () => {
-  const { SELLER_EMAIL_ID, SELLER_PASSWORD, DASHBOARD_URI, AUTH_KEY, SELLER_BASE_URI } = amazon;
+  const { SELLER_EMAIL_ID, SELLER_PASSWORD, DASHBOARD_URI, AUTH_KEY, SELLER_BASE_URI } = process.env;
   const orderHistory = [];
 
   //#region 1. Initial startup
