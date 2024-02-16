@@ -14,11 +14,11 @@ var fs = require('fs');
  * 9. Listing Price
  * 10. Tax
  * 11. Shipping
- * 12. Refund
- * 13. Closing Amount
+ * 12. Closing Amount
+ * 13. Refund
  */
 
-const fileName = '';
+const fileName = 'january-24';
 const fileData = fs.readFileSync(`../../data/amazon/orders/${fileName}.json`, 'utf8');
 const parsedData = JSON.parse(fileData);
 const transformedRows = [];
