@@ -33,7 +33,7 @@ function saveAmazonOrders() {
     },
   });
 
-  const Orders = mongoose.model('orders', orderSchema);
+  const Orders = mongoose.model('amazon-orders', orderSchema);
   const documents = orders.map((order) => {
     return {
       order_id: order.id,
@@ -121,7 +121,7 @@ function saveInstagramOrders() {
     purchase_price: Number,
     shipping: Number,
   });
-  const Orders = mongoose.model('orders', orderSchema);
+  const Orders = mongoose.model('instagram-orders', orderSchema);
 
   Orders.insertMany(documents)
     .then(() => {
