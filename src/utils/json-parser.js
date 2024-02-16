@@ -18,7 +18,7 @@ var fs = require('fs');
  * 13. Refund
  */
 
-const fileName = 'january-24';
+const fileName = '';
 const fileData = fs.readFileSync(`../../data/amazon/orders/${fileName}.json`, 'utf8');
 const parsedData = JSON.parse(fileData);
 const transformedRows = [];
