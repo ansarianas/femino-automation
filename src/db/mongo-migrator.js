@@ -72,24 +72,19 @@ function saveAmazonOrders() {
 }
 
 function saveAmazonProducts() {
-  const file = `../../data/amazon/orders/${process.argv[2].replace('--', '')}.xlsx`;
-  const workbook = xlsx.readFile(file);
-  const sheetName = workbook.SheetNames;
-  const products = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName[0]]);
+  const products = JSON.parse(fs.readFileSync(`../../data/amazon/orders/${process.argv[2].replace('--', '')}.json`));
   const productSchema = new mongoose.Schema(
     {
       name: String,
-      thumbnail_uri: String,
       cost_price: Number,
     },
-    { collection: 'amazonProducts' },
+    { collection: 'amazon-products' },
   );
 
   const Product = mongoose.model('product', productSchema);
   const documents = products.map((product) => {
     return {
       name: product.product_name,
-      thumbnail_uri: product.thumbnail_uri,
       cost_price: product.cost_price,
     };
   });
